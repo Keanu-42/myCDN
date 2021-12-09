@@ -1,4 +1,4 @@
-![myWindowsTerminal](https://cdn.jsdelivr.net/gh/Keanu-42/Keanu-42.github.io@v1.6/windows_terminal/myWindowsTerminal.jpg)
+![myWindowsTerminal](https://cdn.jsdelivr.net/gh/Keanu-42/myCDN@main/windows_terminal/new_powershell.jpg)
 ## 前言
 
 ***最近我把我的电脑更新到win11了，短短使用了几天后，在系统动画和UI这些方面win11都让我挺满意的，bug也基本没有遇到（~~自定义分辨率导致设置窗口闪退~~），Windows Terminal也从开发版过渡到稳定版，而这也无疑是我在windows上最喜欢的工具之一，写这篇帖子就是来简单地聊聊我的windows终端的使用经验。***
@@ -161,3 +161,17 @@ C:\Users\FallingSky\AppData\Local\Programs\oh-my-posh\themes\jandedobbeleer.omp.
 做到这里，你就拥有了一个简单美观，易配置的Windows Terminal了。
 
 >　终端里的黑色小三角估计也是字体原因
+
+----
+
+### 补充
+
+当你看到封面里的终端图片和文章里的差别那么大时，请不要奇怪，因为这就是我后来重新修改的样子: )
+
+#### 字体
+
+字体我重新选用的是`Hack NF`，依然还是在[Nerd Fonts](https://nerdfonts.com)网站下载。这个字体更圆润、更粗一些，看着更舒服。
+
+#### 背景
+
+背景我重新添加了一个颜色配置文件，操作很简单，只需复制一份`One Half Dark`的配置并重命名，然后修改`background`的数值为`#001B26`即可。除此之外，在Terminal的外观设置当中，可以把“在选项卡行中显示亚克力效果”打开，这样窗口边框也有了透明效果。
