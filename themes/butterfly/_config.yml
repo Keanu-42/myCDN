@@ -86,7 +86,7 @@ favicon: /img/favicon.png
 
 # Avatar (頭像)
 avatar:
-  img: https://cdn.jsdelivr.net/gh/Keanu-42/myCDN@myBlog/public/img/touxiang.jpg
+  img: https://cdn.jsdelivr.net/gh/Keanu-42/myCDN@main/touxiang.png
   effect: false
 
 # Disable all banner image
