@@ -48,6 +48,9 @@ libgooglepinyin----或lib（xxxpinyin）
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS="@im=fcitx"
+
+export LANG="zh_CN.UTF-8"
+export LC_CTYPE="zh_CN.UTF-8"
 ```
 
 ![输入法配置](https://cdn.jsdelivr.net/gh/Keanu-42/Keanu-42.github.io@v1.1.0/Gnome使用细节/输入法配置.png)
