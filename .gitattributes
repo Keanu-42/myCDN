@@ -1,10 +1,10 @@
-*.md linguist-language=md
+*.md linguist-language=markdown
 *.java linguist-language=Java
 *.yml linguist-language=yml
 *.html linguist-language=html
 *.js linguist-language=Js
 *.xml linguist-language=xml
-*.css linguist-language=md
+*.css linguist-language=markdown
 *.sql linguist-language=sql
 *.uml linguist-language=uml
 *.cmd linguist-language=cmd
