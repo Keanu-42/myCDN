@@ -176,6 +176,16 @@ C:\Users\FallingSky\AppData\Local\Programs\oh-my-posh\themes\jandedobbeleer.omp.
 
 背景我重新添加了一个颜色配置文件，操作很简单，只需复制一份`One Half Dark`的配置并重命名，然后修改`background`的数值为`#001B26`即可。除此之外，在Terminal的外观设置当中，可以把“在选项卡行中显示亚克力效果”打开，这样窗口边框也有了透明效果。
 
-我又换了一个新的主题——powerlevel10k_rainbow，这个就不存在黑色小三角的问题，而且双行显示给你留下了足够的打字空间，不用担心主题样式过长: ) 。
+#### 主题推荐
 
-![new1_pwsh](https://cdn.jsdelivr.net/gh/Keanu-42/myCDN@main/windows_terminal/new1_pwsh.png)
+- powerlevel10k_rainbow.omp.json
+
+  这个主题是`oh-my-posh`自带的，且样式不存在黑色小三角的问题，双行显示也给你留下了足够的打字空间，不用担心主题样式过长: ) 。
+
+  ![new1_pwsh](https://cdn.jsdelivr.net/gh/Keanu-42/myCDN@main/windows_terminal/new1_pwsh.png)
+
+- [takuya.omp.json](https://github.com/craftzdog/dotfiles-public/tree/master/.config/powershell)
+  
+  这是一个第三方主题，来自于一位我很喜欢的油管博主[devaslife](https://www.youtube.com/c/devaslife)，人如其名是一个程序员大佬，他个人打造的pwsh、fish shell、vim等，都非常美观实用。在这个主题中，你可以按住`ctrl`并点击鼠标左键可以打开当前所在路径，非常方便。
+
+  ![pwsh_takuya](https://cdn.jsdelivr.net/gh/Keanu-42/myCDN@main/windows_terminal/pwsh_takuya.png)
