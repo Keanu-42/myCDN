@@ -1,5 +1,5 @@
-*.java linguist-language=Java
 *.md linguist-language=Java
+*.java linguist-language=Java
 *.yml linguist-language=Java
 *.html linguist-language=Java
 *.js linguist-language=Java
