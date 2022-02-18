@@ -13,3 +13,7 @@
 tmux完美地解决了多窗口、多会话和程序后台执行的问题，就算把WSL的窗口关掉了都可以，玩了这么久的Linux，可惜现在才知道。tmux的自定义程度很高，在网上你可以找到很多关于美化tmux的文章，更多相关的介绍和使用技巧详见上述链接，目前我就不在这里一一赘述。
 
 ![tmux](https://cdn.jsdelivr.net/gh/Keanu-42/myCDN@main/Gnome使用细节/tmux.gif)
+
+你应该不会想在手机上用的，tmux的许多功能都是依靠快捷键来实现，在这上面反而失去了方便快捷的意义。
+
+![tmux_termux](https://cdn.jsdelivr.net/gh/Keanu-42/myCDN@main/Gnome使用细节/Shell_20220218-103825-277.png)
