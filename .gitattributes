@@ -4,7 +4,7 @@
 *.html linguist-language=html
 *.js linguist-language=Js
 *.xml linguist-language=xml
-*.css linguist-language=markdown
+*.css linguist-language=css
 *.sql linguist-language=sql
 *.uml linguist-language=uml
 *.cmd linguist-language=cmd
