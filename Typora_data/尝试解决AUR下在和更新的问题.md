@@ -4,7 +4,7 @@
 
 - 修改前
 
-```
+```bash
   12   │ DLAGENTS=('file::/usr/bin/curl -qgC - -o %o %u'
   13   │           'ftp::/usr/bin/curl -qgfC - --ftp-pasv --retry 3 --retry-delay 3 -o %o %u'
   14   │           'http::/usr/bin/curl -qgb "" -fLC - --retry 3 --retry-delay 3 -o %o %u'
@@ -15,7 +15,7 @@
 
 - 修改后
 
-```
+```bash
   12   │ DLAGENTS=('file::/usr/bin/curl -qgC - -o %o %u'
   13   │           'ftp::/usr/bin/axel -n 15 -a -o %o %u'
   14   │           'http::/usr/bin/axel -n 15 -a -o %o %u'
@@ -26,7 +26,7 @@
 
 - 脚本文件（fake_curl_makepkg.sh）
 
-```shell
+```bash
    1   │ #! /bin/bash
    2   │ # 该脚本用于处理yay安装软件时，由github下载缓慢甚至无法下载的问题
    3   │ # 检测域名是不是github，如果是，则替换为镜像网站，依旧使用curl下载
@@ -52,7 +52,7 @@
 
 修改完并重新登录后，使用`pamac update`进行更新，会提示该脚本未安装：
 
-```
+```bash
 正在准备...
 正在克隆 electron-netease-cloud-music 构建文件...
 生成 electron-netease-cloud-music 信息...
