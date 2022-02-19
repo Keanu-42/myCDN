@@ -37,7 +37,7 @@ winget的用法和其它包管理器类似，很简单，例如：
 
 ***注：使用winget命令时，需全程科学上网***
 
-```
+```bash
 //搜索应用程序
 winget search <package name>
 
@@ -63,7 +63,7 @@ WSL（Windows Subsystem for Linux），即适用于Linux的Windows子系统，�
 
 目前微软官方提供了以下几个Linux发行版的子系统，你可以在微软商店里安装，或使用WSL命令工具安装。
 
-```
+```bash
 NAME            FRIENDLY NAME
 Ubuntu          Ubuntu
 Debian          Debian GNU/Linux
@@ -135,14 +135,14 @@ Ubuntu-20.04    Ubuntu 20.04 LTS
 
 安装好后，在终端里输入`ohmyposh.exe`，如果输出终端样式发生改变则安装成功。然后继续输入`notepad $PROFILE`打开你的配置文件，第一次打开时可能会提示该文件并不存在，问你是否创建，点击“是”就行了。打开后，根据[官方文档](https://ohmyposh.dev/docs/windows)的要求，我们要在文本框里输入以下指令：
 
-```
+```bash
 oh-my-posh --init --shell pwsh --config ~/jandedobbeleer.omp.json | Invoke-Expression
 ```
 ***注：“~”要替换为你的主题文件所在目录，“oh-my-posh”前也建议加上路径，后面的JSON文件就是你的默认主题，而oh-my-posh默认安装了大量主题，你可以自行选择***
 
 这里给出我的配置，以供参考：
 
-```
+```bash
 C:\Users\FallingSky\AppData\Local\Programs\oh-my-posh\bin\oh-my-posh --init --shell pwsh --config 
 
 C:\Users\FallingSky\AppData\Local\Programs\oh-my-posh\themes\jandedobbeleer.omp.json | Invoke-Expression
