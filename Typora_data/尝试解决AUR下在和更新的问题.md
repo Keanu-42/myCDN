@@ -95,18 +95,20 @@
 
 ----
 
-@lance6716
+> @lance6716
+> 
+> “脚本未安装”可能说的是结果而不是原因？有没有试过手动传参数运行一下
+> > 没试过，请问一下大佬我应该怎么做？
 
-  “脚本未安装”可能说的是结果而不是原因？有没有试过手动传参数运行一下
-  > 没试过，请问一下大佬我应该怎么做？
+> @lance6716
+> 
+> 看上去你这个脚本的第一个参数是期望保存的文件名，第二个参数是下载地址，就用注释里的例子`https://github.com/beekeeper-studio/beekeeper-studio/releases/download/v1.6.11/beekeeper-studio_1.6.11_amd64.deb`试试呗
+>> 脚本是可以用的。
+>>> 老哥，我每次更新系统的时候都会有这个提示，“警告： os-prober will be executed to detect other bootable partitions.”，我看网上的资料是在`etc/default/grub`里添加`GRUB_DISABLE_OS_PROBER=false`，问题是我这里已经有了。顺便问一下pamac的缓存位置在哪，有没有清理的必要（
 
-@lance6716
+> @douglarek
+> 
+> 这个警告不用管，没有任何的影响。你添加的那个`GRUB_DISABLE_OS_PROBER=false`恰好就是这个警告的来源，你可以设置为`true`消除这个警告，但是如果你电脑里面同时有windows和linux，那么`grub2`只会引导linux，不再引导windows。pamac缓存你可以使用`pamac clean`清理，有没有必要看你硬盘大小，硬盘大可以不用着急清理，你可以设定保存的版本数。
+>> 嗯，了解，我现在确实是Win + Linux，那就忽略这个警告吧。
 
-  看上去你这个脚本的第一个参数是期望保存的文件名，第二个参数是下载地址，就用注释里的例子`https://github.com/beekeeper-studio/beekeeper-studio/releases/download/v1.6.11/beekeeper-studio_1.6.11_amd64.deb`试试呗
-  > 脚本是可以用的。
-  >> 老哥，我每次更新系统的时候都会有这个提示，“警告： os-prober will be executed to detect other bootable partitions.”，我看网上的资料是在`etc/default/grub`里添加`GRUB_DISABLE_OS_PROBER=false`，问题是我这里已经有了。顺便问一下pamac的缓存位置在哪，有没有清理的必要（
-
-@douglarek
-
-  这个警告不用管，没有任何的影响。你添加的那个`GRUB_DISABLE_OS_PROBER=false`恰好就是这个警告的来源，你可以设置为`true`消除这个警告，但是如果你电脑里面同时有windows和linux，那么`grub2`只会引导linux，不再引导windows。pamac缓存你可以使用`pamac clean`清理，有没有必要看你硬盘大小，硬盘大可以不用着急清理，你可以设定保存的版本数。
-  > 嗯，了解，我现在确实是Win + Linux，那就忽略这个警告吧。
+----
