@@ -8,11 +8,17 @@
 
 前几天我随手查看了一下过往所有的提交记录发现了一个很奇怪的事，凡是我在本地的提交都没有“Verified”，也就是签名验证，仔细了解了一下，这个验证是用来证明这里提交的每一行代码或字符都是绝对可信的(由我本人提交的)，虽不是什么大问题，但不解决的话心里还是很膈应。在网上查阅一番，遇到了一个熟悉的东西——PGP签名，说明git也是通过这种方式来完成验证，先在本地生成公、私密钥，公钥交给云端仓库，自己每次提交的时候用私钥加密。PGP的使用方法以及整个的操作流程在git的 *[官方文档](https://docs.github.com/cn/authentication/managing-commit-signature-verification/checking-for-existing-gpg-keys)* 都有详细的说明，这里就不用赘述。
 
+![git_sign](https://cdn.jsdelivr.net/gh/Keanu-42/myCDN@main/日常琐事/git_sign.png)
+
 ### AUR网络
 
 在不借助魔法的条件下怎样更新和下载AUR软件，是国内AUR用户的一个痛点。之前我已经在这篇文章 *【[尝试解决AUR下载和更新的问题](https://www.keanu-42.cn/posts/53965/)】* 里讲了方法，可惜没有完成，好在这次在Arch的中文社区里成功解决了这个问题。简单来讲，就是把脚本放在`/usr/bin`目录下就可以了，记得在`makepkg.conf`里添上 **“.sh”** 后缀！虽然我把脚本放在`home`下的时候也是`chmod +x`了的，但就是不行，真是玄学（
 
 > 完整的讨论过程 *[点我](https://bbs.archlinuxcn.org/viewtopic.php?id=12144)*
+
+![aur_without_vpn](https://cdn.jsdelivr.net/gh/Keanu-42/myCDN@main/aur%20%26%20pamac/aur_without_vpn.png)
+
+> <center>不需要魔法的AUR，多是一件美事啊～</center>
 
 讨论的过程中还有另一个收获——***开源社区的语言风格***，关于这方面，替我解决脚本问题的这位Arch社区的大佬是这样说的，我记录下来：
 
@@ -65,6 +71,21 @@
 
 > 完整的讨论过程 *[点我](https://forum.manjaro.org/t/nvidia-gpu-not-working-possibly-related-to-latest-driver/103303/)*
 
-最后还想说一句：开源社区不好混，你得一直保持严谨的态度。
+通过`inxi -G`命令可以看到，独显使用的是NVIDIA驱动，且系统运行在X11框架上（后面又有一次大更
+
+```bash
+Graphics:
+  Device-1: Intel WhiskeyLake-U GT2 [UHD Graphics 620] driver: i915 v: kernel
+  Device-2: NVIDIA GP108M [GeForce MX250] driver: nvidia v: 510.54
+  Device-3: Realtek USB Camera type: USB driver: uvcvideo
+  Display: x11 server: X.org v: 1.21.1.3 driver: X:
+    loaded: modesetting,nvidia unloaded: nouveau gpu: i915
+    resolution: 1920x1080~60Hz
+  OpenGL: renderer: Mesa Intel UHD Graphics 620 (WHL GT2)
+    v: 4.6 Mesa 21.3.7
+
+```
+
+<center>最后还想说一句：开源社区不好混，你得一直保持严谨的态度。</center>
 
 <center>至此，告一段落...</center>
