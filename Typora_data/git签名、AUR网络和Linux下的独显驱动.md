@@ -10,6 +10,33 @@
 
 ![git_sign](https://cdn.jsdelivr.net/gh/Keanu-42/myCDN@main/日常琐事/git_sign.png)
 
+**另外提醒一下**，在Windows平台对git完成签名后想要提交时，应该会遇到以下问题：
+
+- 设置签名：
+
+  ```bash
+  $ gpg config --global user.signingkey "your_secret_key"
+  ```
+
+- 提交一次修改，得到报错：
+
+  ```bash
+  $ git commit -S -m "XXX"
+  ```
+
+  ```bash
+  gpg: skipped "xxx": secret key not available
+  gpg: signing failed: No secret key
+  ```
+
+明明已经设置好了私钥，那问题出在哪呢？再次网上查阅得知，原来在Windows上还需要告诉git你的`GPG.exe`在哪，这简单，解决了后就可以正常提交了。
+
+- 给git配置GPG路径：
+
+  ```bash
+  $ git config --global gpg.program "E:\GnuPG\bin\gpg.exe"
+  ```
+
 ### AUR网络
 
 在不借助魔法的条件下怎样更新和下载AUR软件，是国内AUR用户的一个痛点。之前我已经在这篇文章 *【[尝试解决AUR下载和更新的问题](https://www.keanu-42.cn/posts/53965/)】* 里讲了方法，可惜没有完成，好在这次在Arch的中文社区里成功解决了这个问题。简单来讲，就是把脚本放在`/usr/bin`目录下就可以了，记得在`makepkg.conf`里添上 **“.sh”** 后缀！虽然我把脚本放在`home`下的时候也是`chmod +x`了的，但就是不行，真是玄学（
