@@ -1,4 +1,4 @@
-![myWindowsTerminal](https://cdn.jsdelivr.net/gh/Keanu-42/myCDN@main/windows_terminal/new_powershell.jpg)
+![myWindowsTerminal](https://cdn.jsdelivr.net/gh/Keanu-42/myCDN@main/windows_terminal/winfetch.png)
 ## 前言
 
 ***最近我把我的电脑更新到win11了，短短使用了几天后，在系统动画和UI这些方面win11都让我挺满意的，bug也基本没有遇到（~~自定义分辨率导致设置窗口闪退~~），Windows Terminal也从开发版过渡到稳定版，而这也无疑是我在windows上最喜欢的工具之一，写这篇帖子就是来简单地聊聊我的windows终端的使用经验。***
