@@ -189,3 +189,39 @@ C:\Users\FallingSky\AppData\Local\Programs\oh-my-posh\themes\jandedobbeleer.omp.
   这是一个第三方主题，来自于一位我很喜欢的油管博主[devaslife](https://www.youtube.com/c/devaslife)，人如其名是一个程序员大佬，他个人打造的pwsh、fish shell、vim等，都非常美观实用。在这个主题中，你可以按住`ctrl`并点击鼠标左键可以打开当前所在路径，非常方便。
 
   ![pwsh_takuya](https://cdn.jsdelivr.net/gh/Keanu-42/myCDN@main/windows_terminal/pwsh_takuya.png)
+
+- 插件：[winfetch](https://github.com/kiedtl/winfetch)
+
+  winfetch就是类似于screenfetch、neofetch用来显示系统信息的小程序，可以通过Windows平台的包管理器[PSGallery](https://www.powershellgallery.com/)、[Scoop](https://scoop.sh/)和[Chocolatey](https://chocolatey.org/)来安装（不包括[Winget](https://docs.microsoft.com/zh-cn/windows/package-manager/winget/)）。
+
+  ![winfetch](https://cdn.jsdelivr.net/gh/Keanu-42/myCDN@main/windows_terminal/winfetch.png)
+  
+  PSGallery
+
+  ```bash
+  $ Install-Script -Name pwshfetch-test-1
+  
+  $ Set-Alias winfetch pwshfetch-test-1    # Put this in $PROFILE
+  ```
+
+  Scoop
+
+  ```bash
+  $ scoop install winfetch
+  ```
+
+  Chocolatey
+
+  ```bash
+  $ choco install winfetch -y
+  ```
+
+  通过pwsh手动安装（管理员模式）
+
+  ```bash
+  # download development version
+  $ Invoke-WebRequest "https://raw.githubusercontent.com/kiedtl/winfetch/master/winfetch.ps1" -OutFile ~\.local\bin\winfetch.ps1 -UseBasicParsing
+
+  # download a specific version
+  $ Invoke-WebRequest "https://raw.githubusercontent.com/kiedtl/winfetch/v2.0.0/winfetch.ps1" -OutFile ~\.local\bin\winfetch.ps1 -UseBasicParsing
+  ```
