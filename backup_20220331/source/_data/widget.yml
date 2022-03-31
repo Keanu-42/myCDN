@@ -1,0 +1,14 @@
+bottom:
+    - class_name: user-map
+      id_name: user-map
+      name: 访客地图
+      icon: fas fa-heartbeat
+      order:
+      html: '<script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=DIgsqyQ3n93xXXUj1id8HT46Nh8iXmTaZUVRB_TQsh4"></script>'
+    
+    # - class_name: photo_animate
+    # id_name: photo_animate
+    # name: 图片欣赏
+    # icon: fas fa-heartbeat
+    # order:
+    # html: '<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/Keanu-42/myCDN@main/html/photo_animate_1.0.css">'
