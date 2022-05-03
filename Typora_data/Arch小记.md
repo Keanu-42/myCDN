@@ -70,11 +70,11 @@ DT大佬做了不止一个关于他自己的dtOS的视频，你可以看看这�
 
 这里分享他的三个仓库：
 
-- *[ayamir/i3-dotfiles](https://github.com/ayamir/i3-dotfiles)*：i3
+- *[ayamir/i3-dotfiles](https://github.com/ayamir/i3-dotfiles)* ：i3
 
-- *[ayamir/dotfiles](https://github.com/ayamir/dotfiles)*：dwm、qtile、awesome
+- *[ayamir/dotfiles](https://github.com/ayamir/dotfiles)* ：dwm、qtile、awesome
 
-- *[ayamir/nord-and-light](https://github.com/ayamir/nord-and-light)*：bspwm、i3、spectrwm、xmoand、sway、dwm
+- *[ayamir/nord-and-light](https://github.com/ayamir/nord-and-light)* ：bspwm、i3、spectrwm、xmoand、sway、dwm
 
 ----
 
