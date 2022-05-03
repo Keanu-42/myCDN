@@ -39,7 +39,7 @@
   10   │ others=`echo $2 | cut -f4- -d'/'`;
   11   │ case "$domin" in 
   12   │     "github.com")
-  13   │     url="https://github.com.cnpmjs.org/"$others;
+  13   │     url="https://hub.0z.gs/"$others;
   14   │     echo "download from github mirror $url";
   15   │     /usr/bin/curl -gqb "" -fLC - --retry 3 --retry-delay 3 -o $1 $url;
   16   │     ;;
