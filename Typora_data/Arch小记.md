@@ -4,9 +4,9 @@
 
 ## <center>正文</center>
 
-### 初识”窗口“
+### 初识“窗口”
 
-我第一次接触“窗口”其实是在上一次重装系统的时候试了下Manjaro的i3社区版，距今也有好几个月了，当时因为中文字库缺失直接让我劝退，而我也不知道还要单独安装中文字体。现在重新入坑“窗口”有两个原因：一是我挺喜欢“ *[tiling window managers](https://wiki.archlinux.org/title/Window_manager#Tiling_window_managers)* （平铺式窗口管理器）”的这种交互方式；二是“窗口”的美化也很吸引我。”美化“，在英语里有个专门的名词叫” *[ricing](https://thatnixguy.github.io/posts/ricing/)* “，如果不是在TG群里偶然看到了这个科普，不然我是不会把这两个毫不相干的词联想到一起。
+我第一次接触“窗口”其实是在上一次重装系统的时候试了下Manjaro的i3社区版，距今也有好几个月了，当时因为中文字库缺失直接让我劝退，而我也不知道还要单独安装中文字体。现在重新入坑“窗口”有两个原因：一是我挺喜欢“ *[tiling window managers](https://wiki.archlinux.org/title/Window_manager#Tiling_window_managers)* （平铺式窗口管理器）”的这种交互方式；二是“窗口”的美化也很吸引我。“美化”，在英语里有个专门的名词叫“ *[ricing](https://thatnixguy.github.io/posts/ricing/)* ”，如果不是在TG群里偶然看到了这个科普，不然我是不会把这两个毫不相干的词联想到一起。
 
 ![xmonad_2](https://cdn.jsdelivr.net/gh/Keanu-42/myCDN@main/arch/xmonad_2.png)
 
@@ -25,7 +25,7 @@ $ sudo pacman -S
 
 > 为什么要急着安装字体？问就是经验之谈（
 
-pacman下载不够快的话可以打开多线程，在`etc/pacman.conf`里把”ParallelDownloads“的注释去掉，字体安装好后要么重启要么手动更新一下：
+pacman下载不够快的话可以打开多线程，在`etc/pacman.conf`里把`ParallelDownloads`的注释去掉，字体安装好后要么重启要么手动更新一下：
 
 ```bash
 # 依次执行以下命令
@@ -44,7 +44,7 @@ $ fc-list :lang=zh
 
 ### 安装Xmonad
 
-现在Arch不仅自带”archinstall“安装脚本，也有第三方的 *[GUI镜像](https://archlinuxgui.in/)* ，我则是在虚拟机里装了个kde版本的。系统装好后就开始安装”Xmonad“，这里我用的是油管博主 *[DT大佬](https://www.youtube.com/c/DistroTube)* 的安装脚本，使用了他的脚本就可以直接体验到他本人的桌面及配置。而这个 *[脚本](https://gitlab.com/dwt1/dtos)* 是放在gitlab的仓库里，裸连基本没有问题。在开始安装之前先修改一下两个文件：一是把”pkglist“里的”vim“换成”gvim“，这样可以使用剪贴板功能；二是把脚本里的”doom emacs安装“给注释，毕竟没有魔法插件都装不了，你可以在系统完全装好后再执行这个步骤。在安装过程中如果遇到本地密钥无法被签署的问题请看这个 *[解决方案](https://www.archlinuxcn.org/gnupg-2-1-and-the-pacman-keyring/)* ，安装完毕后重启计算机。
+现在Arch不仅自带“archinstall”安装脚本，也有第三方的 *[GUI镜像](https://archlinuxgui.in/)* ，我则是在虚拟机里装了个kde版本的。系统装好后就开始安装“Xmonad”，这里我用的是油管博主 *[DT大佬](https://www.youtube.com/c/DistroTube)* 的安装脚本，使用了他的脚本就可以直接体验到他本人的桌面及配置。而这个 *[脚本](https://gitlab.com/dwt1/dtos)* 是放在gitlab的仓库里，裸连基本没有问题。在开始安装之前先修改一下两个文件：一是把“pkglist”里的“vim”换成“gvim”，这样可以使用剪贴板功能；二是把脚本里的“doom emacs 安装”给注释，毕竟没有魔法插件都装不了，你可以在系统完全装好后再执行这个步骤。在安装过程中如果遇到本地密钥无法被签署的问题请看这个 *[解决方案](https://www.archlinuxcn.org/gnupg-2-1-and-the-pacman-keyring/)* ，安装完毕后重启计算机。
 
 DT大佬做了不止一个关于他自己的dtOS的视频，你可以看看这期 *【[Manjaro Is Nice. Manjaro With DTOS? Even Better!](https://youtu.be/ZMyWOVGx2c4)】* 在现有的linux发行版上安装他自己的桌面和配置，即dtOS。
 
@@ -65,6 +65,16 @@ DT大佬做了不止一个关于他自己的dtOS的视频，你可以看看这�
 ![xmonad_1](https://cdn.jsdelivr.net/gh/Keanu-42/myCDN@main/arch/xmonad_1.png)
 
 <center>实际体验还不错～</center>
+
+再介绍一位大佬“ayamir”，他在知乎 *[讲解](https://www.zhihu.com/question/41364792/answer/1771261986)* 了目前一些主流“窗口”的优缺点和使用体验并分享他自己的桌面配置，其中涵盖了好几种“窗口”，我正是因为看了他的配置才更加坚定了入坑“窗口”的决心。
+
+这里分享他的三个仓库：
+
+- *[ayamir/i3-dotfiles](https://github.com/ayamir/i3-dotfiles)*：i3
+
+- *[ayamir/dotfiles](https://github.com/ayamir/dotfiles)*：dwm、qtile、awesome
+
+- *[ayamir/nord-and-light](https://github.com/ayamir/nord-and-light)*：bspwm、i3、spectrwm、xmoand、sway、dwm
 
 ----
 
