@@ -10,7 +10,7 @@
 
 ![vim](https://cdn.jsdelivr.net/gh/Keanu-42/myCDN@main/windows_terminal/vim.png)
 
-我自己在使用vim的时候就只用了两三个插件， *“[nerdtree](https://github.com/preservim/nerdtree)”* 、 *“[vim-dict](https://github.com/skywind3000/vim-dict)”* 和 *“[vim-auto-popmenu](https://github.com/skywind3000/vim-auto-popmenu)”* ，前者都知道，后者分别是字典和自动补全。在安装这些插件前得先安装一个 *“[vim-plug](https://github.com/junegunn/vim-plug)”* ，这事专门用来管理插件的，很实用。
+我自己在使用vim的时候就只用了两三个插件， *“[nerdtree](https://github.com/preservim/nerdtree)”* 、 *“[vim-dict](https://github.com/skywind3000/vim-dict)”* 和 *“[vim-auto-popmenu](https://github.com/skywind3000/vim-auto-popmenu)”* ，前者都知道，后者分别是字典和自动补全。在安装这些插件前得先安装一个 *“[vim-plug](https://github.com/junegunn/vim-plug)”* ，这事专门用来管理插件的，很实用。而且网上还有个专门收录vim插件的网站叫 *“[VimAwesome](https://vimawesome.com/)”* 。
 
 ### 安装方法：
 
@@ -56,6 +56,26 @@ set shortmess+=c
 call plug#end()
 
 ```
+
+### 使用技巧
+
+怎样在vim里使用系统剪贴板是个老生常谈的问题，首先你得看你的vim支不支持“clipboard”，可以输入以下命令查看，如果“clipboard”前有个“+”符号则支持。
+
+```bash
+$ vim --version | grep "clipboard"
+```
+
+如果不支持的话，你可以先卸载当前vim然后安装gvim，这样一同安装的vim就支持剪贴板同步。
+
+> neovim是真的不支持
+
+- 复制vim里的内容到剪贴板
+
+    在“可视模式”下，选中内容输入 `" + y` 完成复制
+
+- 粘贴剪贴板里的内容到vim
+
+    在“普通模式”下，按快捷键 `" + p` 完成粘贴
 
 ### SpaceVim
 
