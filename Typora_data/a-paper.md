@@ -257,7 +257,7 @@ Tcolor-128的第二部分包含从互联网重新收集的78个颜色序列。�
 
 除了地面目标跟踪外，TColor-128中的每个序列还有其它挑战因素，该数据集同样使用了上面提到的11个因素。其中，当目前框架中边界框的大小与第一帧的大小之比落在范围 内时，为尺度变化；当目标运动大于20像素时，为快速运动；当地面目标跟踪框内的像素数量少于400时，则是低分辨率。图2-1给出了Tcolor-128中挑战因素的分布。
 
-![tc128]()
+![tc128](https://cdn.jsdelivr.net/gh/Keanu-42/myCDN@main/paper_img/tc128.png)
 
 > <center>图2-1 TColor-128中挑战因素的分布</center>
 
@@ -273,7 +273,7 @@ $$P=\sqrt{\left(X_{A}-X_{B}\right)^{2}+\left(Y_{A}-Y_{B}\right)^{2}}\tag{2-29}$$
 
 式(2-29)中 $P$ 表示的是中心位置的误差值，我们以蓝色矩形表示实际目标跟踪框，橙色矩形表示预测目标跟踪框的，A、B分别表示两个矩形框的中心，如图2-2所示：
 
-![ab]()
+![ab](https://cdn.jsdelivr.net/gh/Keanu-42/myCDN@main/paper_img/ab.png)
 
 > <center>图2-2 中心位置误差示意图</center>
 
@@ -287,7 +287,7 @@ $$S=\frac{\operatorname{Area}\left(B_{t} \cap B_{a}\right)}{\operatorname{Area}\
 
  $B_{a}$ 表示目标实际的边界框， B_{t} 表示目标跟踪的边界框， $\cap$ 和 $\cup$ 分别表示两个边界框内区域的交集和并集，成功率表示重叠率 $S$ 大于给定阈值的图像帧数占总图像帧数的百分比，我们可以将成功率图曲线下的面积 $(A\cup C)$ 作为评价标准。重叠区域示意图如图2-3，蓝色方框表示目标的实际边框，黄色方框表示预测的目标边框，中间黄色部分表示两个边框的重叠区域。
 
-![ab1]()
+![ab1](https://cdn.jsdelivr.net/gh/Keanu-42/myCDN@main/paper_img/ab1.png)
 
 > <center>重叠区域示意图</center>
 
@@ -359,7 +359,7 @@ A_{t}^{l}=A_{t-1}^{l} \\[2ex]
 B_{t}=B_{t-1}
 \end{array} \quad, PSR \leq 7, \eta=0 .\right.\tag{3-9}$$
 
-![jogging]()
+![psr](https://cdn.jsdelivr.net/gh/Keanu-42/myCDN@main/paper_img/PSR-1.png)
 
 > <center>Jogging2视频序列中的遮挡实验</center>
 
@@ -367,7 +367,7 @@ B_{t}=B_{t-1}
 
 DSST是由位置滤波器和尺度滤波器两部分构成的，在一个完整的流程中，首先输入首帧图像初始化参数。我们通过位置滤波器以目标旧位置为中心采集样本，计算并得到样本的像素点特征，然后乘以ham窗作为测试输入。因为加入了PSR判决条件，这里会判断当前帧的峰值旁瓣比是否满足我们预设条件，当PSR大于阈值时更新目标模板，小于时就不更新。后面通过尺度滤波器进行尺度样本提取，如果目标模板更新了，就以新位置为中心提取样本，如果没有更新则以旧位置提取样本。根据样本我们可以提取到HOG特征，最后再乘以ham输出图像。整个实验流程如图3-2所示：
 
-![DSST]()
+![DSST](https://cdn.jsdelivr.net/gh/Keanu-42/myCDN@main/paper_img/newnew.png)
 
 > <center>DSST算法模板更新流程图</center>
 
@@ -395,11 +395,11 @@ Precision plots表示的含义是：跟踪算法估计的目标位置（bounding
 
 通过精确度曲线图4-1可以看出，在给定阈值条件下，原DSST算法在精确度方面与改进后的算法明显相差16.92%；在成功率方面则相差11.02%。由此可见，改进后的效果提升很明显。
 
-![t_p]()
+![t_p](https://cdn.jsdelivr.net/gh/Keanu-42/myCDN@main/paper_img/t_p.png)
 
 > <center>图4-1 改进后的算法与原算法的精确度曲线</center>
 
-![t_s]()
+![t_s](https://cdn.jsdelivr.net/gh/Keanu-42/myCDN@main/paper_img/t_s.png)
 
 > <center>图4-2 改进后的算法与原算法的成功率曲线</center>
 
@@ -407,11 +407,11 @@ Precision plots表示的含义是：跟踪算法估计的目标位置（bounding
 
 我们先用原DSST算法来和其他六种跟踪器进行性能评估，通过图4-3我们可以很明显地看出来，在相同阈值下，原DSST算法的百分比明显小于其他的算法。同样，在图4-4中我们可以看出在相同阈值下，原DSST算法的成功率很低，远不如其他算法。
 
-![d_p]()
+![d_p](https://cdn.jsdelivr.net/gh/Keanu-42/myCDN@main/paper_img/d_P.png)
 
 > <center>图4-3 DSST的精确度曲线</center>
 
-![d_s]()
+![d_s](https://cdn.jsdelivr.net/gh/Keanu-42/myCDN@main/paper_img/d_s.png)
 
 > <center>图4-4 DSST的成功率曲线</center>
 
@@ -419,11 +419,11 @@ Precision plots表示的含义是：跟踪算法估计的目标位置（bounding
 
 在跟踪精确度上，改进后的算法排在第二位，比第一的MEEM只差0.7%，而远远超出第三名的SAMF的5%；在跟踪成功率上，改进后的算法直接排在第一位，甚至比第二名的高出1.1%，比第三名的SAMF更是高出2.9%。而相较于传统的跟踪器算法比如KCF，在成功率和精确度上分别落下我们12.8%和15.3%，差距显而易见，如表4-1所示。
 
-![do_p]()
+![do_p](https://cdn.jsdelivr.net/gh/Keanu-42/myCDN@main/paper_img/do_p.png)
 
 > <center>图4-5 DSST_ours的精确度曲线
 
-![do_s]()
+![do_s](https://cdn.jsdelivr.net/gh/Keanu-42/myCDN@main/paper_img/do_s.png)
 
 > <center>图4-6 DSST_ours的成功率曲线
 ----
@@ -436,11 +436,11 @@ Precision plots表示的含义是：跟踪算法估计的目标位置（bounding
 
 在上面我们把DSST算法和其他目标跟踪算法分别做了对比试验，因为TColor-128数据集涵盖了多种实际的目标跟踪可能会遇到的干扰因素，比如遮挡、光照、模糊、速度过快等，所以实验对比下来不同的算法的结果都得到了应有的表现。现在我们把所有涉及到的跟踪器都放在一起做一个总的性能评估。可以看到，在图4-8中原DSST算法也是有着不差的成功率，但是在图4-7中的精确度的表现就很差，具体体现在目标跟踪时，该算法对尺度变换、目标遮挡等因素的应对能力较弱。
 
-![b_p]()
+![b_p](https://cdn.jsdelivr.net/gh/Keanu-42/myCDN@main/paper_img/a_p.png)
 
 > <center>图4-7 8种跟踪器的整体精确度曲线</center>
 
-![b_s]()
+![b_s](https://cdn.jsdelivr.net/gh/Keanu-42/myCDN@main/paper_img/a_s.png)
 
 > <center>图4-8 8种跟踪器的整体成功率曲线</center>
 
@@ -463,7 +463,7 @@ Precision plots表示的含义是：跟踪算法估计的目标位置（bounding
 
 图4-9是一组快速运动的视频序列，由于目标的快速移动导致图像变得模糊，加大了目标跟踪的难度。在第18帧图中所有的算法都还能准确捕捉到目标，但是在30帧的时候，传统的KCF算法已经脱离了目标，在第41帧的时候，L1APG也脱离了目标包括跟踪性能优秀的MEEM算法，这时我们的算法还能捕捉到目标。在图4-10这组图像中，体现出了显著的鲁棒性。
 
-![bee]()
+![bee](https://cdn.jsdelivr.net/gh/Keanu-42/myCDN@main/paper_img/bee.png)
 
 > <center>图4-9 本算法与其他5种算法在Bee_ce视频序列上的跟踪结果对比</center>
 
@@ -471,11 +471,11 @@ Precision plots表示的含义是：跟踪算法估计的目标位置（bounding
 
 图4-10是一组背景元素复杂的视频图像，在第10帧时，图中的元素较少，所有的算法都能准确捕捉到目标，但是在第120帧图像中，目标附近出现了几个行人和红绿灯，他们的大小及距离让其中一些算法产生偏离，只是还没有明显脱离。在第150帧图像中，KCF算法已经脱离目标，而其他算法均已产生不同程度的偏差，只有我们的还能完全捕捉到目标位置。在图4-11中的第100帧图像中，由于目标与旁边的汽车走到了一起，此时红色的L1APG算法已经产生明显偏离，在第561帧图像中，KCF和L1APG脱离了目标，只有其余四个还在，这也同样体现出我们的算法的鲁棒性。
 
-![bicycle]()
+![bicycle](https://cdn.jsdelivr.net/gh/Keanu-42/myCDN@main/paper_img/bicycle.png)
 
 > <center>图4-10 本算法与其他5种算法在Bicycle视频序列上的跟踪结果对比</center>
 
-![woman]()
+![woman](https://cdn.jsdelivr.net/gh/Keanu-42/myCDN@main/paper_img/woman.png)
 
 > <center>图4-11 本算法与其他5种算法在Woman视频序列上的跟踪结果对比</center>
 
@@ -483,11 +483,11 @@ Precision plots表示的含义是：跟踪算法估计的目标位置（bounding
 
 在图4-12中，由于目标从近到远的位移导致了图像中发生了连续的尺度变换，这也是很考验算法的鲁棒性。在第30帧图像中，因为目标的尺寸已经变小，黑色的FCT算法和红色的L1APG算法开始脱离目标，在第111帧图像中这两种算法就完全脱离了，同时KCF、MEEM和MIL算法也产生偏离，只有我们的还能刚好完全捕捉到目标的尺寸。同理，在图4-13的第412帧图像中，其他算法都失去了目标的准确尺寸，但是在PSR判据的帮助下，本文的算法依然还能锁定目标的尺寸。
 
-![corssing]()
+![corssing](https://cdn.jsdelivr.net/gh/Keanu-42/myCDN@main/paper_img/crossing.png)
 
 > <center>图4-12 本算法与其他5种算法在Crossing视频序列上的跟踪结果对比</center>
 
-![walking]()
+![walking](https://cdn.jsdelivr.net/gh/Keanu-42/myCDN@main/paper_img/walking.png)
 
 > <center>图4-13 本算法与其他5种算法在Walking视频序列上的跟踪结果对比</center>
 
@@ -495,11 +495,11 @@ Precision plots表示的含义是：跟踪算法估计的目标位置（bounding
 
 目标遮挡也是一个非常考验算法鲁棒性的问题，很大程度上决定了这个算法能不能作为实际使用。在图4-14中，当目标移动到树的附近时，黄色的MIL算法和红色的L1APG开始有脱离目标中心位置的趋势，最终在第160帧图像中只有L1APG完全丢失目标。在图4-15的第68帧中，当目标移动到电桩的后面时，有几类算法偏离了目标中心位置，当目标离开电桩后面时，除了绿色的本文算法还能捕获到目标，红色的L1APG和MEEM都捕获到其他目标上去了，而剩下的都完全偏离目标。
 
-![david]()
+![david](https://cdn.jsdelivr.net/gh/Keanu-42/myCDN@main/paper_img/david.png)
 
 > <center>图4-14 本算法与其他5种算法在David3视频序列上的跟踪结果对比</center>
 
-![jogging]()
+![jogging](https://cdn.jsdelivr.net/gh/Keanu-42/myCDN@main/paper_img/jogging.png)
 
 > <center>图4-15 本算法与其他5种算法在Jogging1视频序列上的跟踪结果对比</center>
 
