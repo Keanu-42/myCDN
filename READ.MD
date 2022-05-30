@@ -26,6 +26,13 @@
 
     `npm install hexo-renderer-pug hexo-renderer-stylus --save`
 
+- 公式渲染
+
+  ```bash
+  npm uninstall hexo-renderer-marked --save  #卸载原引擎
+  npm install hexo-renderer-kramed --save    #安装新引擎
+  ```
+
 ----
 
 <center>小孩纸不懂事，博客写着玩的: )</center>
