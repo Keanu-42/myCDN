@@ -8,7 +8,7 @@
 
 我第一次接触“窗口”其实是在上一次重装系统的时候试了下Manjaro的i3社区版，距今也有好几个月了，当时因为中文字库缺失直接让我劝退，而我也不知道还要单独安装中文字体。现在重新入坑“窗口”有两个原因：一是我挺喜欢“ *[tiling window managers](https://wiki.archlinux.org/title/Window_manager#Tiling_window_managers)* （平铺式窗口管理器）”的这种交互方式；二是“窗口”的美化也很吸引我。“美化”，在英语里有个专门的名词叫“ *[ricing](https://thatnixguy.github.io/posts/ricing/)* ”，如果不是在TG群里偶然看到了这个科普，不然我是不会把这两个毫不相干的词联想到一起。
 
-![xmonad_2](https://cdn.jsdelivr.net/gh/Keanu-42/myCDN@main/arch/dtos_full.png)
+![xmonad_2](https://cdn.jsdelivr.net/gh/Keanu-42/myCDN@main/arch/mjo1.png)
 
 ----
 
@@ -62,7 +62,7 @@ DT大佬做了不止一个关于他自己的dtOS的视频，你可以看看这�
 
   - 选择壁纸时，用<kbd>M</kbd>键进行标记
 
-![xmonad_1](https://cdn.jsdelivr.net/gh/Keanu-42/myCDN@main/arch/dtos_sh.png)
+![xmonad_1](https://cdn.jsdelivr.net/gh/Keanu-42/myCDN@main/arch/mjo2.png)
 
 <center>实际体验还不错～</center>
 
