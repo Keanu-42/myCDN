@@ -98,4 +98,22 @@ $ sudo systemctl mask pamac-mirrorlist.timer
 
 写得不多，要解决的问题我可能之前就解决了，对于Arch这个系统我目前不太可能作实际使用，但是后面还是会更新一些相关知识的，希望吧。然后提一嘴 *[nixOS](https://nixos.org/)* 这个系统，最近被一位朋友传经布道，不知道会不会成为Linux发行版中的新主流。
 
+>  目前NixOS已经发布了带有图形安装器版本的镜像（22.05 release），这极大方便了了想要安装该系统的用户，可以预见，Nix势必会成为继Arch之后又一新的“邪教”。
+
+----
+
+### 有趣的小程序/软件
+
+- *[cool-retro-term](https://github.com/Swordfish90/cool-retro-term)* 
+
+cool-retro-term 是一个终端仿真器，它被设计成模仿旧阴极管屏幕（CRT显示器）的外观和感觉，引人注目、可定制且相当轻巧。
+
+这个软件内置了九种显示效果，在“窗口”下使用只需鼠标右键点击软件界面就可以弹出设置选项，安装也很简单，大部分Linux发行版可以直接通过包管理器安装（例如，Debian系、Arch系）。
+
+|                           Default                            |                             Dos                              |
+| :----------------------------------------------------------: | :----------------------------------------------------------: |
+| ![](https://cdn.jsdelivr.net/gh/Keanu-42/myCDN@main/arch/crt_default.png) | ![](https://cdn.jsdelivr.net/gh/Keanu-42/myCDN@main/arch/crt_dos.png) |
+
+
+
 <center>未完待续...</center>
